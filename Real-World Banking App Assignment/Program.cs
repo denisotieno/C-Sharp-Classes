@@ -18,6 +18,10 @@ class Program
         current.Deposit(1000);
         current.Withdraw(1800); 
 
+        Console.WriteLine("\nAccount Types:");
+        foreach(var account in customer.Accounts)
+            Console.WriteLine(account.ToString());
+
         Console.WriteLine("\nTransaction History for Savings:");
         foreach (var tx in savings.Transactions)
             Console.WriteLine($"{tx.Timestamp}: {tx.TransactionType} - {tx.Amount:C}");
